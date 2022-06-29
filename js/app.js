@@ -23,26 +23,26 @@
         }
     }), 0);
     const input = document.querySelectorAll(".page__input");
-    const firstText = document.querySelectorAll(".page__text_first");
-    const secondText = document.querySelectorAll(".page__text_second");
-    document.querySelectorAll(".page__top");
-    document.querySelectorAll(".page__text");
-    for (let index = 0; index < input.length; index++) {
-        const element = input[index];
-        element.oninput = function() {
-            const minNumber = Number(element.value);
-            if (75 === minNumber || minNumber > 75) {
-                firstText[index].classList.add("_hidden");
-                secondText[index].classList.remove("_hidden");
-            } else {
-                secondText[index].classList.add("_hidden");
-                firstText[index].classList.remove("_hidden");
-            }
-        };
-    }
-    for (let index = 0; index < secondText.length; index++) {
-        const secondElement = secondText[index];
-        secondElement.classList.add("_hidden");
+    if (input) {
+        const firstText = document.querySelectorAll(".page__text_first");
+        const secondText = document.querySelectorAll(".page__text_second");
+        for (let index = 0; index < input.length; index++) {
+            const element = input[index];
+            element.oninput = function() {
+                const minNumber = Number(element.value);
+                if (75 === minNumber || minNumber > 75) {
+                    firstText[index].classList.add("_hidden");
+                    secondText[index].classList.remove("_hidden");
+                } else {
+                    secondText[index].classList.add("_hidden");
+                    firstText[index].classList.remove("_hidden");
+                }
+            };
+        }
+        for (let index = 0; index < secondText.length; index++) {
+            const secondElement = secondText[index];
+            secondElement.classList.add("_hidden");
+        }
     }
     window["FLS"] = true;
     isWebp();
