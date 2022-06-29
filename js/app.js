@@ -25,34 +25,12 @@
     const input = document.querySelectorAll(".page__input");
     const firstText = document.querySelectorAll(".page__text_first");
     const secondText = document.querySelectorAll(".page__text_second");
-    const textWrapper = document.querySelectorAll(".page__top");
-    function addNewHeight() {
-        for (let index = 0; index < textWrapper.length; index++) {
-            const first = firstText[index];
-            const second = secondText[index];
-            const firstHeight = first.clientHeight;
-            const secondHeight = second.clientHeight;
-            console.log(firstHeight);
-            console.log(secondHeight);
-            if (firstHeight > secondHeight) {
-                console.log(firstHeight);
-                textWrapper[index].style.height = `${firstHeight}px`;
-            } else if (secondHeight > firstHeight) textWrapper[index].style.height = `${secondHeight}px`;
-        }
-    }
-    addNewHeight();
-    window.addEventListener("resize", (function() {
-        addNewHeight();
-    }));
-    for (let index = 0; index < secondText.length; index++) {
-        const secondElement = secondText[index];
-        secondElement.classList.add("_hidden");
-    }
+    document.querySelectorAll(".page__top");
+    document.querySelectorAll(".page__text");
     for (let index = 0; index < input.length; index++) {
         const element = input[index];
         element.oninput = function() {
             const minNumber = Number(element.value);
-            addNewHeight();
             if (75 === minNumber || minNumber > 75) {
                 firstText[index].classList.add("_hidden");
                 secondText[index].classList.remove("_hidden");
@@ -61,6 +39,10 @@
                 firstText[index].classList.remove("_hidden");
             }
         };
+    }
+    for (let index = 0; index < secondText.length; index++) {
+        const secondElement = secondText[index];
+        secondElement.classList.add("_hidden");
     }
     window["FLS"] = true;
     isWebp();
