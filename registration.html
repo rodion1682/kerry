@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220704183046">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220706223416">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,9 +41,37 @@
 			</section>
 
 			<section id="registration" class="page__registration registration">
-				<span>Form Placeholder</span>
-				<div class="registration__background-ibg_contain">
-					<picture><source srcset="img/registration/01.webp" type="image/webp"><img src="img/registration/01.png" alt="image"></picture>
+				<div class="registration__inner">
+					<h2 class="registration__title">Registration form</h2>
+					<script src="//explore.kerry.com/js/forms2/js/forms2.min.js?_v=20220706223416"></script>
+					<form id="mktoForm_5797"></form>
+					<script>
+						MktoForms2.loadForm("//explore.kerry.com", "117-TLU-222", 5797);
+					</script>
+
+
+					<!-- <form action="#" class="registration__form">
+						<div class="registration__box">
+							<div class="registration__line">
+								<div class="registration__label">Email address</div>
+								<input autocomplete="off" type="text" name="form[]" placeholder="Default input" class="input">
+							</div>
+							<div class="registration__line">
+								<div class="registration__label">Example select</div>
+								<select name="form[]" data-class-modif="form">
+									<option value="1" selected>Default Select 1</option>
+									<option value="2">Default Select 2</option>
+									<option value="3">Default Select 3</option>
+									<option value="4">Default Select 4</option>
+								</select>
+							</div>
+							<div class="registration__line">
+								<div class="registration__label">Example Textarea</div>
+								<textarea autocomplete="off" name="form[]" placeholder="Massage" class="input"></textarea>
+							</div>
+						</div>
+						<button type="submit" class="registration__btn _button">Submit</button>
+					</form> -->
 				</div>
 			</section>
 
@@ -99,7 +127,8 @@
 					<form action="#" class="footer__form">
 						<div class="footer__text">Subscribe to our newsletter</div>
 						<div class="footer__line">
-							<input data-required="email" autocomplete="off" type="text" name="form[]" placeholder="Email Address" class="input">
+							<!-- data-required="email" -->
+							<input autocomplete="off" type="text" name="form[]" placeholder="Email Address" class="input">
 							<button type="submit" class="footer__button">OK</button>
 						</div>
 					</form>
@@ -107,7 +136,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20220704183046"></script>
+	<script src="js/app.min.js?_v=20220706223416"></script>
 </body>
 
 </html>
