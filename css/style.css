@@ -702,6 +702,10 @@ html {
   transition: all 0.3s ease 0s !important;
 }
 
+form.mktoForm {
+  background-color: #f9c20a !important;
+}
+
 .eat-page {
   position: relative;
   overflow: hidden;
